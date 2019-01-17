@@ -7,7 +7,7 @@ module.exports = {
 
     // https://webpack.js.org/concepts/entry-points/#multi-page-application
     entry: {
-        index: './src/main.js',
+        index: './src/app.js'
     },
 
     // https://webpack.js.org/configuration/dev-server/
@@ -31,7 +31,14 @@ module.exports = {
                 use: [
                     "style-loader",
                     "css-loader"
-                    // Please note we are not running postcss here
+                ]
+            },
+            {
+                test: /\.scss$/,
+                use: [
+                    "style-loader", // creates style nodes from JS strings
+                    "css-loader", // translates CSS into CommonJS
+                    "sass-loader" // compiles Sass to CSS, using Node Sass by default
                 ]
             },
             {
@@ -54,10 +61,10 @@ module.exports = {
     // https://webpack.js.org/concepts/plugins/
     plugins: [
         new HtmlWebpackPlugin({
-            template: './src/index.html',
+            template: 'index.html',
             inject: true,
             chunks: ['index'],
-            filename: 'index.html'
+            filename: './index.html'
         })
     ]
 };

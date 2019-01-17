@@ -16,7 +16,7 @@ module.exports = {
 
     // https://webpack.js.org/concepts/entry-points/#multi-page-application
     entry: {
-        index: './src/index.js'
+        index: './src/app.js'
     },
 
     // how to write the compiled files to disk
@@ -45,6 +45,14 @@ module.exports = {
                 ]
             },
             {
+                test: /\.scss$/,
+                use: [
+                    "style-loader", // creates style nodes from JS strings
+                    "css-loader", // translates CSS into CommonJS
+                    "sass-loader" // compiles Sass to CSS, using Node Sass by default
+                ]
+            },
+            {
                 // Load all images as base64 encoding if they are smaller than 8192 bytes
                 test: /\.(png|jpg|gif|svg)$/,
                 use: [
@@ -64,7 +72,7 @@ module.exports = {
     plugins: [
         new CleanWebpackPlugin(buildPath),
         new HtmlWebpackPlugin({
-            template: './src/index.html',
+            template: '.index.html',
             inject: 'body',
             chunks: ['index'],
             filename: 'index.html'

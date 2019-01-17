@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My homepage</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport"
+          content="width=device-width,user-scalable=0,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+</head>
+<body>
+
+<div id="content">
+    <div class="section" data-anchor="one" data-tooltip="one">One</div>
+    <div class="section" data-anchor="two" data-tooltip="two">
+        <div class="slide" data-anchor="slide1">Two 1</div>
+        <div class="slide" data-anchor="slide2">Two 2</div>
+    </div>
+    <div class="section" data-anchor="three" data-tooltip="three">Three</div>
+    <div class="section" data-anchor="four" data-tooltip="four">Four</div>
+</div>
+
+<input type="checkbox" id="button">
+<label for="button" onclick></label>
+<nav id="menu" role="off-canvas">
+    <ul>
+        <li data-menuanchor="one" class="active"><a href="#one">One</a></li>
+        <li data-menuanchor="two"><a href="#two">Two</a></li>
+        <li data-menuanchor="three"><a href="#three">Three</a></li>
+        <li data-menuanchor="four"><a href="#four">Four</a></li>
+    </ul>
+</nav>​
+</body>
+</html>
