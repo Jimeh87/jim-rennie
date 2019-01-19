@@ -1,25 +1,9 @@
-//* {
-//  box-sizing:border-box;
-//}
-
 .section {
+  padding-top: 3em;
+  color: #F4F7F5;
   text-align: center;
   font-size: 5em;
 }
-
-///*#fp-nav {*/
-//  /*top: 5%*/
-///*}*/
-
-//#menu {
-//  //width: 100%;
-//  //height: 75px;
-//  //top: 0;
-//  //position: absolute;
-//  //z-index: 999;
-//  //background-color: #000;
-//  //opacity: .8;
-//}
 
 #content {
   float: left;
@@ -31,80 +15,24 @@
   box-sizing: border-box;
 }
 
-html,
-body {
-  width: 100%;
-  height: 100%;
-}
-
-/* custom scrollbar */
-::-webkit-scrollbar {
-  width: .95em;
-}
-
-::-webkit-scrollbar-track {
-  background-color: rgba(217, 217, 217, .5);
-}
-
-::-webkit-scrollbar-thumb {
-  background: rgba(184, 184, 184, .5);
-  box-shadow: inset .05em .05em 0 rgba(0, 0, 0, .1),
-  inset 0 -.05em 0 rgba(0, 0, 0, .07);
-}
-
-/* dummy content */
-//.content {
-//  float:left;
-//  font: 1em 'Open Sans', sans-serif;
-//  margin:.75em 0 0 0;
-//  transition: margin .3s ease-in-out;
-//
-//  > p {
-//    margin:.25em 0 .75em 0;
-//  }
-//}
-
-/* Advanced Checkbox Hack */
-body {
-  -webkit-animation: bugfix infinite 1s;
-}
-
-@-webkit-keyframes bugfix {
-  from {
-    padding: 0;
-  }
-  to {
-    padding: 0;
-  }
-}
-
-//input[type=checkbox] {
-//  position: absolute;
-//  top: -9999px;
-//  left: -9999px;
-//}
-
 #menu-toggle {
   position: absolute;
   left: 0;
   display: none;
-  width: 2em;
-  height: 2.25em;
+  width: 2.5em;
+  height: 2em;
   padding: .35em;
   font-size: 1.1em;
-  color: #fff;
+  color: #F4F7F5;
   transition: color .3s ease-in-out;
   cursor: pointer;
   user-select: none;
   margin: 0;
-  background: rgba(0, 0, 0, .4);
 }
 
-/* big screens */
 nav[role="off-canvas"] {
-  position: absolute;
+  position: fixed;
   z-index: 999;
-  width: 50em;
   margin: 0 auto;
   transition-duration: .3s, .5s;
   transition-timing-function: ease-in-out;
@@ -127,14 +55,14 @@ nav[role="off-canvas"] {
     > li {
       float: left;
       padding: .55em .55em;
-      width: 8em;
-      height: 8em;
+      width: 10em;
+      height: 10em;
       margin: .5em;
       opacity: .8;
 
       text-transform: uppercase;
       display: table;
-      background: hsla(11, 94%, 50%, .65);
+      background: #130303;
       cursor: pointer;
 
       text-align: center;
@@ -143,32 +71,32 @@ nav[role="off-canvas"] {
       transition-property: box-shadow, color, opacity, padding-left;
 
       &:hover {
-        color: #fff;
+        color: #F4F7F5;
         opacity: 1;
         box-shadow: 0 0 0 .5em rgba(255, 255, 255, .95);
 
         > a {
-          color: #fff;
+          color: #F4F7F5;
         }
       }
 
       &:nth-child(2) {
-        background: hsla(44, 94%, 50%, .65);
+        background: #071E22;
       }
       &:nth-child(3) {
-        background: hsla(114, 94%, 50%, .65);
+        background: #2F3061;
       }
       &:nth-child(4) {
-        background: hsla(184, 94%, 50%, .65);
+        background: #F4C095;
       }
       &:nth-child(5) {
-        background: hsla(224, 94%, 50%, .65);
+        background: #A54657;
       }
     }
   }
 }
 
-@media screen and (max-width: 590px) {
+@media screen and (max-width: 900px) {
   $menu_width: 20em;
   $content_offset: .5em;
 
@@ -184,7 +112,7 @@ nav[role="off-canvas"] {
 
   nav[role="off-canvas"] {
     position: absolute;
-    top: 3em;
+    top: 3.5em;
     left: -$menu_width;
     width: $menu_width;
     opacity: 0;
@@ -203,25 +131,29 @@ nav[role="off-canvas"] {
 
   #menu-toggle {
     display: block;
+    top: 1em;
+    left: 1em;
   }
 
-  #menu-toggle:after {
-    position: absolute;
-    right: .25em;
-    top: 0;
-    content: "\2261";
-    font-size: 2em;
+  #menu-toggle span {
+    display: block;
+    width: 100%;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+
+    background: #cdcdcd;
+    border-radius: 3px;
   }
 
   #menu-toggle:hover,
   #menu-toggle.open {
-    color: #000;
+    color: #F4F7F5;
   }
 
   #menu-toggle.open ~ nav[role="off-canvas"] {
     opacity: 1;
-    left: 0;
-    //box-shadow: -30em 0 0 30em rgba(0, 0, 0, .3);
+    left: 1em;
 
     ul > li {
       padding: .55em .55em .55em 1.5em;
@@ -235,7 +167,7 @@ nav[role="off-canvas"] {
         right: .25em;
         content: "\203A";
         font: bold 1.4em sans-serif;
-        color: inherit;
+        color: #F4F7F5;
       }
     }
   }

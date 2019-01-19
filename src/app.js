@@ -19,7 +19,7 @@ export class App {
             menu: '#menu',
             navigation: false,
             // navigationPosition: "right",
-            sectionsColor: ['#ff5f45', '#0798ec', '#fc6c7c', 'grey'],
+            sectionsColor: ['#130303', '#071E22', '#2F3061', '#F4C095', '#A54657'],
             showActiveTooltip: true,
             slidesNavigation: true,
             recordHistory: false,
@@ -37,14 +37,9 @@ export class App {
     }
 
     bind() {
-        this._element.querySelector('#my-first-button').onclick = function () {
-            console.log('bar');
-        };
-
-        this._element.querySelector('#menu-toggle').onclick = function (event) {
-            const target = event.target;
-            target.classList.toggle('open');
-        };
+        this._element.querySelector('#menu-toggle').onclick = function () {
+            this._element.querySelector('#menu-toggle').classList.toggle('open');
+        }.bind(this);
 
         this._element.querySelector('#content').onclick = function () {
             this._element.querySelector('#menu-toggle').classList.remove('open');
