@@ -168,8 +168,7 @@ nav[role="off-canvas"] {
   }
 }
 
-/* small screens */
-@media screen and (max-width: 44em) {
+@media screen and (max-width: 590px) {
   $menu_width: 20em;
   $content_offset: .5em;
 

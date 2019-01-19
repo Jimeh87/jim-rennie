@@ -13,7 +13,8 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             title: 'Jim Rennie',
-            inject: true
+            template: './index.html',
+            inject: 'body'
         })
     ],
     module: {
