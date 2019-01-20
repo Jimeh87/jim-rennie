@@ -2,19 +2,21 @@ import {} from 'normalize.css/normalize.css';
 import {} from 'fullpage.js/dist/fullpage.css';
 import {} from './app.scss';
 import template from './index.html';
+import AboutMe from './about-me/about-me.index'
 
 const fullpage = require('fullpage.js');
 
-export class App {
+class App {
 
     constructor(element) {
         this._element = element;
-        this.setTemplate();
+        this.applyTemplates();
         this.bind();
     }
 
-    setTemplate() {
+    applyTemplates() {
         this._element.innerHTML = template;
+        this._aboutMe = new AboutMe(this._element.querySelector('#about-me-wrapper'));
     }
 
     bind() {

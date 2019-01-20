@@ -1,0 +1,51 @@
+.about-me-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-me-text {
+  color: #130303;
+  background-color: #F4F7F5;
+  padding: 1em 2em 1em 2em;
+  align-self: center;
+  max-width: 50em;
+}
+
+@media screen and (max-width: 900px) {
+  .about-me-text {
+    width: auto;
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+  }
+  .no-mobile {
+    display: none;
+  }
+}
+
+.about-me-primary {
+  font-weight: bold;
+}
+
+a.pretty-link {
+  color: #130303;
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  &:before {
+    background-color: #130303;
+    content: '';
+    height: 1px;
+    position: absolute;
+    bottom: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.3s ease-in-out;
+    width: 100%;
+  }
+  &:hover {
+    &:before {
+      width: 0;
+    }
+  }
+}
