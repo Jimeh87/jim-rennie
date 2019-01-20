@@ -15,6 +15,14 @@ export class App {
 
     setTemplate() {
         this._element.innerHTML = template;
+    }
+
+    bind() {
+        this.bindFullPage();
+        this.bindToHtml();
+    }
+
+    bindFullPage() {
         new fullpage('#content', {
             menu: '#menu',
             navigation: false,
@@ -35,7 +43,7 @@ export class App {
         });
     }
 
-    bind() {
+    bindToHtml() {
         this._element.querySelector('#menu-toggle').onclick = function () {
             this._element.querySelector('#menu-toggle').classList.toggle('open');
         }.bind(this);
