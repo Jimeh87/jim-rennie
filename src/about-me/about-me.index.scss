@@ -1,7 +1,7 @@
 .about-me-container {
   display: flex;
   justify-content: center;
-  align-items: center;
+  height: 100%;
 }
 
 .about-me-text {
@@ -10,11 +10,13 @@
   padding: 1em 2em 1em 2em;
   align-self: center;
   max-width: 50em;
+  overflow-y: auto;
 }
 
 @media screen and (max-width: 900px) {
   .about-me-text {
     width: auto;
+    align-self: flex-start;
     margin-left: 1.5em;
     margin-right: 1.5em;
   }
