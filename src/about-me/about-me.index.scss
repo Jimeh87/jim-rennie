@@ -10,7 +10,9 @@
   padding: 1em 2em 1em 2em;
   align-self: center;
   max-width: 50em;
-  overflow-y: auto;
+  -moz-box-shadow: inset 0 0 1em #071E22;
+  -webkit-box-shadow: inset 0 0 1em #071E22;
+  box-shadow: inset 0 0 1em #071E22;
 }
 
 @media screen and (max-width: 900px) {
