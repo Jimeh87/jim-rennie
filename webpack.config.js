@@ -9,7 +9,7 @@ module.exports = {
     output: {
         filename: '[name].[hash:20].js',
         path: path.resolve(__dirname, 'dist'),
-        publicPath: "/jim-rennie/"
+        // publicPath: "/jim-rennie/"
     },
     plugins: [
         new HtmlWebpackPlugin({
