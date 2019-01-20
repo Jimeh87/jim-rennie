@@ -8,7 +8,8 @@ module.exports = {
     entry: './src/app.js',
     output: {
         filename: '[name].[hash:20].js',
-        path: path.resolve(__dirname, 'dist')
+        path: path.resolve(__dirname, 'dist'),
+        publicPath: "/jim-rennie/"
     },
     plugins: [
         new HtmlWebpackPlugin({

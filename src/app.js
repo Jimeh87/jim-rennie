@@ -18,13 +18,12 @@ export class App {
         new fullpage('#content', {
             menu: '#menu',
             navigation: false,
-            // navigationPosition: "right",
             sectionsColor: ['#130303', '#071E22', '#2F3061', '#F4C095', '#A54657'],
             showActiveTooltip: true,
             slidesNavigation: true,
             recordHistory: false,
             css3: true,
-            // scrollBar: false,
+            scrollBar: false,
             loopBottom: false,
             loopTop: false,
             loopHorizontal: true,
@@ -49,7 +48,6 @@ export class App {
             this._element.querySelector('#menu-toggle').click();
         }.bind(this);
     }
-
 
 }
 
