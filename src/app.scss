@@ -212,3 +212,32 @@ nav[role="off-canvas"] {
     margin-right: -($menu_width + $content_offset);
   }
 }
+
+a.pretty-link {
+  color: inherit;
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  &:before {
+    background-color: #130303;
+    content: '';
+    height: 1px;
+    position: absolute;
+    bottom: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.3s ease-in-out;
+    width: 100%;
+  }
+  &:hover {
+    &:before {
+      width: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .no-mobile {
+    display: none;
+  }
+}

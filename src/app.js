@@ -3,6 +3,9 @@ import {} from 'fullpage.js/dist/fullpage.css';
 import {} from './app.scss';
 import template from './index.html';
 import AboutMe from './about-me/about-me.index'
+import Project from "./project/project.index";
+import Life from "./life/life.index"
+import Social from "./social/social.index";
 
 const fullpage = require('fullpage.js');
 
@@ -16,7 +19,14 @@ class App {
 
     applyTemplates() {
         this._element.innerHTML = template;
-        this._aboutMe = new AboutMe(this._element.querySelector('#about-me-wrapper'));
+        new AboutMe(this._element.querySelector('#about-me-wrapper'));
+        new Project(this._element.querySelector('#graphql-project-wrapper'), 'graphql');
+        new Project(this._element.querySelector('#game-of-life-project-wrapper'), 'gameoflife');
+        new Project(this._element.querySelector('#junit5-project-wrapper'), 'junit5');
+        new Project(this._element.querySelector('#pencil-project-wrapper'), 'pencil');
+        new Project(this._element.querySelector('#ggcurling-project-wrapper'), 'ggcurling');
+        new Life(this._element.querySelector('#life-wrapper'));
+        new Social(this._element.querySelector('#social-project-wrapper'));
     }
 
     bind() {
@@ -39,9 +49,9 @@ class App {
             loopHorizontal: true,
             controlArrows: true,
             verticalCentered: false,
-            // fixedElements: ‘#header, .footer’,
             keyboardScrolling: true,
-            animateAnchor: true
+            animateAnchor: true,
+            responsiveSlides: false
         });
     }
 
