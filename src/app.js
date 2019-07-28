@@ -2,6 +2,7 @@ import {} from 'normalize.css/normalize.css';
 import {} from 'fullpage.js/dist/fullpage.css';
 import {} from './app.scss';
 import template from './index.html';
+import Home from "./home/home.index";
 import AboutMe from './about-me/about-me.index'
 import Project from "./project/project.index";
 import Life from "./life/life.index"
@@ -19,6 +20,7 @@ class App {
 
     applyTemplates() {
         this._element.innerHTML = template;
+        new Home(this._element.querySelector('#home-wrapper'))
         new AboutMe(this._element.querySelector('#about-me-wrapper'));
         new Project(this._element.querySelector('#graphql-project-wrapper'), 'graphql');
         new Project(this._element.querySelector('#game-of-life-project-wrapper'), 'gameoflife');
@@ -26,7 +28,7 @@ class App {
         new Project(this._element.querySelector('#pencil-project-wrapper'), 'pencil');
         new Project(this._element.querySelector('#ggcurling-project-wrapper'), 'ggcurling');
         new Life(this._element.querySelector('#life-wrapper'));
-        new Social(this._element.querySelector('#social-project-wrapper'));
+        new Social(this._element.querySelector('#social-wrapper'));
     }
 
     bind() {

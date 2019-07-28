@@ -1,0 +1,23 @@
+#home-container {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+#title-container {
+  font-family: Garamond, serif;
+  align-self: center;
+
+  h1 {
+    font-size: 5em;
+    margin: 0;
+    color: #F4F7F5;
+  }
+
+  h3 {
+    font-size: 2em;
+    margin: 0;
+    color: #D2D4D2;
+  }
+}
