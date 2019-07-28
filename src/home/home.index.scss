@@ -5,7 +5,7 @@
   width: 100%;
 }
 
-#title-container {
+#home-title {
   font-family: Garamond, serif;
   align-self: center;
 
@@ -23,7 +23,7 @@
 }
 
 @media screen and (max-width: 900px) {
-  #title-container {
+  #home-title {
     h1 {
       font-size: 4rem;
     }
