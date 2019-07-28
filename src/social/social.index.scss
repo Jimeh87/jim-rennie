@@ -16,13 +16,7 @@
   }
 }
 
-@media screen and (max-width: 767px) {
-  $social-button-radius: 80px;
-}
-
-@media screen and (min-width: 768px) {
-  $social-button-radius: 120px;
-}
+$social-button-radius: 80px;
 $social-button-icon-size: 0.4;
 $social-button-background: #F4F7F5;
 $social-button-active-color: #fff;
