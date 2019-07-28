@@ -1,22 +1,20 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-// const webpack = require('webpack');
-// const CleanWebpackPlugin = require('clean-webpack-plugin');
-// const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const FaviconsWebpackPlugin  = require('favicons-webpack-plugin');
 
 module.exports = {
     entry: './src/app.js',
     output: {
         filename: '[name].[hash:20].js',
-        path: path.resolve(__dirname, 'dist'),
-        // publicPath: "/jim-rennie/"
+        path: path.resolve(__dirname, 'dist')
     },
     plugins: [
         new HtmlWebpackPlugin({
             title: 'Jim Rennie',
             template: './index.html',
             inject: 'body'
-        })
+        }),
+        new FaviconsWebpackPlugin('./src/assets/iconhost.png')
     ],
     module: {
         rules: [
@@ -51,7 +49,7 @@ module.exports = {
             },
             {
                 // Load all images as base64 encoding if they are smaller than 8192 bytes
-                test: /\.(woff2?|ttf|eot|png|jpg|gif|svg)$/,
+                test: /\.(woff2?|ttf|eot|png|jpg|gif|svg|ico)$/,
                 use: [
                     {
                         loader: 'url-loader',
