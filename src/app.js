@@ -53,7 +53,9 @@ class App {
             verticalCentered: false,
             keyboardScrolling: true,
             animateAnchor: true,
-            responsiveSlides: false
+            responsiveSlides: false,
+            // temporary key
+            licenseKey: 'K+iR`\'tZ3U>3qx+%6A"& b|7nF+)C$Qb]HKc_e8KFh/S%1hpL%WkU\\dd\\dwwd\\-\\\\wwd\\wd-\\w\\wwdw\\-\\ddwdddw\\\\d\\dddd-wdwd\\wddw\\wddd\\\\-w\\dw\\\\wwdd\\\\\\\\w\\-dw\\dwww\\-\\\\\\\\\\d\\d-\\dd\\w\\d\\g.R`6(;r/c8Bu5rp/IYcI5XLt2|F!wbU.<+Ru"p] FH#wEd!JQp|B0}38WgF05lX3RawxbD5G\\=XsSb8hK9QMGq}:v`oCs{n!OC59vnUoh'
         });
     }
 
