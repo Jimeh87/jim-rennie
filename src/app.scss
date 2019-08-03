@@ -99,8 +99,7 @@ nav[role="off-canvas"] {
       &:hover {
         color: #F4F7F5;
         opacity: 1;
-        box-shadow: 0 0 0 .5em rgba(255, 255, 255, .95);
-
+        box-shadow: inset 0 0 0 .5em rgba(255, 255, 255, .95);
         > a {
           color: #F4F7F5;
         }
