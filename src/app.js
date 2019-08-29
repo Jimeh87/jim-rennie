@@ -5,7 +5,7 @@ import template from './index.html';
 import Home from "./home/home.index";
 import AboutMe from './about-me/about-me.index'
 import Project from "./project/project.index";
-import Life from "./life/life.index"
+import Life from "./blog/blog.index"
 import Social from "./social/social.index";
 
 const fullpage = require('fullpage.js');
@@ -27,7 +27,7 @@ class App {
         new Project(this._element.querySelector('#junit5-project-wrapper'), 'junit5');
         new Project(this._element.querySelector('#pencil-project-wrapper'), 'pencil');
         new Project(this._element.querySelector('#ggcurling-project-wrapper'), 'ggcurling');
-        new Life(this._element.querySelector('#life-wrapper'));
+        new Life(this._element.querySelector('#blog-wrapper'));
         new Social(this._element.querySelector('#social-wrapper'));
     }
 

@@ -1,6 +1,6 @@
 import {} from 'normalize.css/normalize.css';
-import {} from './life.index.scss';
-import template from './life.index.html';
+import {} from './blog.index.scss';
+import template from './blog.index.html';
 
 export default class AboutMe {
 
