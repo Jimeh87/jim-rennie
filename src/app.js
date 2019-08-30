@@ -8,7 +8,9 @@ import Project from "./project/project.index";
 import Life from "./blog/blog.index"
 import Social from "./social/social.index";
 
+require('./sitemap.xml');
 const fullpage = require('fullpage.js');
+
 
 class App {
 
