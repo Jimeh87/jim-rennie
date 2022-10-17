@@ -1,0 +1,42 @@
+version: 2.1
+
+orbs:
+  node: circleci/node@5.0.3
+
+jobs:
+  deploy:
+    docker:
+      - image: cimg/base:2022.10
+    steps:
+      - checkout
+      - attach_workspace:
+          at: .
+      - add_ssh_keys:
+          fingerprints:
+            - "66:73:41:4d:e9:cc:e5:63:f5:fc:c1:e5:59:98:96:e1"
+      - run: sh ./scripts/github-pages-deploy.sh dist jimrennie.com
+
+workflows:
+  build-and-deploy:
+    jobs:
+      - node/run:
+          name: build
+          filters:
+            branches:
+              ignore:
+                - gh-pages
+          version: '8.17.0'
+          pkg-manager: yarn
+          yarn-run: build
+          post-steps:
+            - persist_to_workspace:
+                root: .
+                paths:
+                  - .circleci/*
+                  - dist/*
+      - deploy:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
