@@ -11,9 +11,9 @@ jobs:
       - checkout
       - attach_workspace:
           at: .
-#      - add_ssh_keys: TODO
-#          fingerprints:
-#            - ""
+      - add_ssh_keys:
+          fingerprints:
+            - "66:73:41:4d:e9:cc:e5:63:f5:fc:c1:e5:59:98:96:e1"
       - run: sh ./scripts/github-pages-deploy.sh dist jimrennie.com
 
 workflows:
