@@ -1,4 +1,4 @@
-# JimRennie.com [![Build Status](https://travis-ci.com/Jimeh87/jim-rennie.svg?branch=master)](https://travis-ci.com/Jimeh87/jim-rennie)
+# JimRennie.com [![CircleCI](https://dl.circleci.com/status-badge/img/gh/Jimeh87/jim-rennie/tree/master.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/Jimeh87/jim-rennie/tree/master)
 
 ## Site
 https://jimrennie.com
